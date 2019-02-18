@@ -1,0 +1,21 @@
+IF
+True()
+Delay(60)
+THEN
+RESPONSE #20
+MoveToPoint([1582.1374])
+DisplayStringHead("D#Silver",@8)
+RESPONSE #20
+MoveToPoint([1750.1241])
+DisplayStringHead("D#Silver",@9) 
+RESPONSE #20
+MoveToPoint([1993.1544])
+DisplayStringHead("D#Silver",@10)
+RESPONSE #20
+MoveToPoint([2198.1544])
+DisplayStringHead("D#Silver",@11)
+RESPONSE #20
+MoveToPoint([1999.1218])
+DisplayStringHead("D#Silver",@12)
+END
+

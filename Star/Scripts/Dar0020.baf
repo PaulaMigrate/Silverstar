@@ -1,0 +1,10 @@
+IF
+Global("D#SilverExists","GLOBAL",0)
+!IfValidForPartyDialogue("D#Silver")
+!Dead("D#Silver")
+THEN
+RESPONSE #100
+SetGlobal("D#SilverExists","GLOBAL",1)
+CreateCreature("D#Silver",[672.604],4)
+Continue()
+END

@@ -1,0 +1,209 @@
+BACKUP ~Star\backup~
+//AUTHOR ~Olryx2@Yahoo.co.uk~
+SUPPORT ~PaulaMigrate@mail.com~
+VERSION ~v2.0~
+
+AUTO_TRA ~Star/%s~
+
+ALWAYS
+  ACTION_IF GAME_IS ~eet~ BEGIN
+    OUTER_SET bg2_chapter = 12
+  END ELSE BEGIN
+    OUTER_SET bg2_chapter = 0
+  END
+  OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+    OUTER_SET bg2_chapter = bg2_chapter + 1
+    OUTER_SPRINT name_source ~bg2_chapter_%i%~
+    OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+  END
+END
+
+LANGUAGE ~English~
+         ~English~
+         ~Star/English/Setup.tra~
+
+
+
+BEGIN ~SilverStar NPC~
+
+ADD_KIT ~StarHL~
+~StarHL                  1           1           1           1           1           0           0           0~
+~StarHL   0 1 0 0 1 0 0 1 0 1 1 0 0 1 1 1 0 1 0 0 0 0 1 1 0 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~
+~StarHL                  0       15      0       0       0       0~
+~StarHL                  0       0       0       0       0       0~
+~StarHL                  0       0       0       0       0       0~
+~StarHL                  0       0       0       0       0       0~
+~StarHL                  0       1       1       1       1       1       1       1       1~
+~StarHL                  0       0       0       0       0       0~
+~Star/lib/StarHL.2da~
+~~
+~0x00040000	4~
+~TH0~
+~LEAT14 * * BAG28 RING06 RING05,10 * BOOT02 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 DAGG12 SW1H28 STAF08~
+SAY @1
+SAY @2
+SAY @3
+
+INCLUDE ~Star/lib/fl#add_kit_ee.tpa~
+LAF fl#add_kit_ee 
+STR_VAR 
+kit_name = StarHL
+END
+
+COPY ~Star/lib/StarHL.2da~ ~override\StarHL.2da~
+
+COPY ~Star\Creature\D#Silver.cre~ ~override\D#Silver.cre~
+  SAY AREA_CITY ~~ [Innoco]
+  SAY AREA_DUNGEON ~~ [Innocp]
+  SAY AREA_FOREST ~~ [Innocn]
+  SAY AREA_NIGHT ~~ [Innocr]
+  SAY BATTLE_CRY1 ~~ [Female2a]
+  SAY BATTLE_CRY2 ~~ [Innoc8]
+  SAY BORED ~Please, a little kill, even a little one! I'm bored.~ [Innocd]
+  SAY CRITICAL_HIT ~~ [Innocz]
+  SAY CRITICAL_MISS ~~ [Innoc1]
+  SAY DAMAGE ~~ [Female2l]
+  SAY DYING ~~ [Female2m]
+  SAY HAPPY ~~ [Female2a]
+  SAY HURT ~~ [Innoce]
+  SAY LEADER ~~ [Innocb]
+  SAY PICKED_POCKET ~~ [Innoc4]
+  SAY REACT_TO_DIE_GENERAL ~~ [Innocw]
+  SAY SELECT_ACTION1 ~~ [Innocf]
+  SAY SELECT_ACTION2 ~~ [Innocg]
+  SAY SELECT_ACTION3 ~~ [Innoch]
+  SAY SELECT_ACTION4 ~~ [Innocs]
+  SAY SELECT_ACTION5 ~~ [Innoct]
+  SAY SELECT_ACTION6 ~~ [Innocu]
+  SAY SELECT_COMMON1 ~~ [Innocx]
+  SAY SELECT_COMMON2 ~~ [Innocy]
+  SAY SELECT_COMMON3 ~~ [Innoch]
+  SAY SELECT_COMMON4 ~~ [Innocs]
+  SAY SELECT_RARE1 ~~ [Innocx]
+  SAY SELECT_RARE2 ~~ [Innocy]
+  SAY TARGET_IMMUNE ~~ [Innoc2]
+  SAY TIRED ~Mommy,I must sleep.~ [Innocc]
+  SAY UNHAPPY_ANNOYED ~Why will no one play with me?~
+  SAY UNHAPPY_BREAKING ~You are mean! You don't want me to play with my knife on other people!~
+  SAY UNHAPPY_SERIOUS ~How can I enjoy myself without a little killing? You said that you would play with me!~
+  SAY SPELL_DISRUPTED ~~ [Innoc6]
+  SAY HIDDEN_IN_SHADOWS ~~ [Innoc5]
+  SAY SET_A_TRAP ~~ [Innoc7]
+  WRITE_SHORT   0x244 0
+  WRITE_SHORT   0x246 0x4000 + ~%StarHL%~
+  SAY NAME1 ~Silver Star~
+  SAY NAME2 ~Silver Star~
+  SAY BIO @6
+
+COMPILE ~Star\Scripts\D#Silver.baf~
+
+COPY ~Star\Spells\D#Sstr.spl~ ~override\D#Sstr.spl~
+  SAY NAME1 @7
+
+EXTEND_BOTTOM ~Ar0602.bcs~ ~Star\Scripts\DAr0602.baf~
+EXTEND_BOTTOM ~Ar0020.bcs~ ~Star\Scripts\DAr0020.baf~
+COMPILE ~Star\Scripts\D#Silv01.baf~
+
+EXTEND_BOTTOM ~Ar4500.bcs~ ~Star\Scripts\DAr4500.baf~
+EXTEND_TOP ~Korgan.bcs~ ~Star\Scripts\D#Korgan.baf~
+EXTEND_BOTTOM ~Viconia.bcs~ ~Star\Scripts\D#Viccy.baf~
+EXTEND_BOTTOM ~Haerdali.bcs~ ~Star\Scripts\D#Haer.baf~
+
+COPY ~Star\Portraits\malefi6L.bmp~ ~override\malefi6L.bmp~
+     ~Star\Portraits\malefi6S.bmp~ ~override\malefi6S.bmp~
+     ~Star\Portraits\HLIDMM.bmp~ ~override\HLIDMM.bmp~
+     ~Star\Portraits\TGME.bmp~ ~override\TGME.bmp~
+     ~Star\Portraits\Seifer.bmp~ ~override\Seifer.bmp~
+     ~Star\Portraits\DFNE.bmp~ ~override\DFNE.bmp~
+     ~Star\Portraits\drow1s.bmp~ ~override\drow1s.bmp~
+
+ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
+COPY ~Star\Portraits\maleEE6L.bmp~ ~override\malefi6L.bmp~
+     ~Star\Portraits\maleEE6L.bmp~ ~override\malefi6S.bmp~
+END
+
+COPY ~Star\Spells\D#Spoi1.spl~ ~override\D#Spoi1.spl~
+SAY NAME1 @13
+COPY ~Star\Spells\D#Spoi2.spl~ ~override\D#Spoi2.spl~
+     ~Star\EFF\D#Spoi1.eff~ ~override\D#Spoi1.eff~
+     ~Star\EFF\D#Spoi2.eff~ ~override\D#Spoi2.eff~
+     ~Star\EFF\sulphur.eff~ ~override\sulphur.eff~
+
+COPY ~Star\Items\D#Silve1.itm~ ~override\D#Silve1.itm~
+  SAY NAME1 @14
+  SAY NAME2 @14
+  SAY UNIDENTIFIED_DESC @15
+  SAY DESC @15
+
+COPY ~Star\Items\D#Silve1.itm~ ~override\D#Silve2.itm~
+  SAY NAME1 @14
+  SAY NAME2 @14
+  SAY UNIDENTIFIED_DESC @16
+  SAY DESC @16
+
+COPY ~Star\Items\D#Crybl1.itm~ ~override\D#Crybl1.itm~
+  SAY NAME1 @17
+  SAY NAME2 @18
+  SAY UNIDENTIFIED_DESC @17
+  SAY DESC @19
+
+APPEND ~ItemDial.2da~ ~D#Crybl1    5689    D#Crybl1~
+EXTEND_BOTTOM ~Baldur.bcs~ ~Star\Scripts\D#Crybl1.baf~
+
+COPY_EXISTING ~SHAPE.cre~ ~override~
+  PATCH_IF SOURCE_SIZE > 0x2d3 BEGIN
+    ADD_CRE_ITEM ~D#CRYBL1~ #0 #0 #0 ~NONE~ ~INV~
+  END
+BUT_ONLY
+COPY ~Star\creature\D#Mary.cre~ ~override\D#Mary.cre~
+ SAY NAME1 @26
+ SAY NAME2 @26
+COPY ~Star\Items\D#liec1.itm~ ~override\D#liec1.itm~
+  SAY NAME1 @27
+  SAY NAME2 @27
+  SAY UNIDENTIFIED_DESC @28
+COMPILE ~Star\Scripts\D#Mary.baf~
+
+COPY ~Star\Spells\DCSdoom.spl~ ~override\DCSdoom.spl~
+     ~Star\Spells\DCSston.spl~ ~override\DCSston.spl~
+     ~Star\Spells\DCSunwo.spl~ ~override\DCSunwo.spl~
+COMPILE ~Star\Scripts\D#Sbansh.baf~
+
+COPY ~Star\Creature\D#Sbansh.cre~ ~override\D#Sbansh.cre~
+  SAY NAME1 @4
+  SAY NAME2 @4
+  SAY BIO @30
+COPY ~Star\Spells\D#SBwail.spl~ ~override\D#SBwail.spl~
+
+COPY_EXISTING ~ISHADMT1.cre~ ~override~
+WRITE_ASCII 0x280 ~ISHADMT1~ 
+
+COPY_EXISTING ~Neeber.cre~ ~override~
+WRITE_ASCII 0x34 ~Seifer~
+
+COPY_EXISTING ~Renal.cre~ ~override~
+WRITE_ASCII 0x34 ~TGME~
+
+COPY_EXISTING ~trgyp02.cre~ ~override~
+WRITE_ASCII 0x34 ~DFNE~
+
+COPY_EXISTING ~Degard.cre~ ~override~
+WRITE_ASCII 0X34 ~HLIDMM~
+
+COMPILE EVALUATE_BUFFER ~Star\Dialogue\SilverJ.d~
+COMPILE ~Star\Dialogue\SilverP.d~
+COMPILE ~Star\Dialogue\Sword.d~
+COMPILE ~Star\Dialogue\BSilver.d~
+COMPILE ~Star\Dialogue\fatesp.d~
+
+APPEND ~pdialog.2da~
+~D#Silver    D#SILVP   D#SILVER D#SILVER  D#SI25P  D#SILVER D#SILVER D#SILVER~
+UNLESS ~D#Silver~
+
+APPEND ~interdia.2da~
+~D#Silver   BSILVER     BSilver~
+UNLESS ~D#Silver~
+
+
+
+

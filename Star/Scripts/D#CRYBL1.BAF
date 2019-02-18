@@ -1,0 +1,19 @@
+IF
+Delay(240)
+CombatCounter(0)
+HasItemEquipedReal("D#Crybl1","D#Silver")
+THEN
+RESPONSE #100
+DisplayStringHeadOwner("D#Crybl1",@20)
+RESPONSE #100
+DisplayStringHeadOwner("D#Crybl1",@21)
+RESPONSE #100
+DisplayStringHeadOwner("D#Crybl1",@22)
+RESPONSE #100
+DisplayStringHeadOwner("D#Crybl1",@23)
+RESPONSE #100
+DisplayStringHeadOwner("D#Crybl1",@24)
+RESPONSE #100
+DisplayStringHeadOwner("D#Crybl1",@25) 
+END
+
