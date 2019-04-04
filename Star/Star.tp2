@@ -102,6 +102,7 @@ COPY ~Star\Spells\D#Sstr.spl~ ~override\D#Sstr.spl~
 
 EXTEND_BOTTOM ~Ar0602.bcs~ ~Star\Scripts\DAr0602.baf~
 EXTEND_BOTTOM ~Ar0020.bcs~ ~Star\Scripts\DAr0020.baf~
+EXTEND_BOTTOM ~Ar2000.bcs~ ~Star\Scripts\Dar2000.baf~
 COMPILE ~Star\Scripts\D#Silv01.baf~
 
 EXTEND_BOTTOM ~Ar4500.bcs~ ~Star\Scripts\DAr4500.baf~

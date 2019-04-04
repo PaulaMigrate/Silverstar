@@ -1,0 +1,9 @@
+IF
+Global("loganjob1","GLOBAL",1)
+Global("trevil01Spawn","GLOBAL",0)
+InParty("d#silver") 
+THEN
+RESPONSE #100
+SetGlobal("trevil01Spawn","GLOBAL",1)
+CreateCreature("TREVIL01",[1087.2524],8)
+END
