@@ -315,7 +315,7 @@ I_C_T idryad2 0 sildryad
 == Minscj  IF ~InParty("Minsc")~ THEN @55
 == Jaheiraj IF ~InParty("Jaheira")~ THEN @57
 == idryad3 @56
-== D#silver @58
+== D#silver IF~InParty("D#Silver")~THEN @58
 == idryad1 @59
 == idryad2 @60
 END
@@ -323,13 +323,13 @@ END
 // Dancer Fitz - Reliev speech, pod people, Ellesimie's room
 
 I_C_T Imoenj 3 silreliev
-== D#Silver @241
-== Imoenj @242
-== D#silver @243
+== D#Silver IF~InParty("D#Silver")~THEN @241
+== Imoenj IF~InParty("D#Silver")~THEN @242
+== D#silver IF~InParty("D#Silver")~THEN @243
 END
 
 I_C_T Life4 4 silsmartass
-== D#Silver @244
+== D#Silver IF~InParty("D#Silver")~THEN @244
 END
 ////////////////////////////////////////////////////////////////
 // The escaped clone and Ellesimie's room
@@ -619,21 +619,30 @@ END
 // Maevar Torture chambers
 
 I_C_T Maevar 2 silvermaevar
-== D#Silver @190 = @191 = @192 = @193
-== Maevar @194
-== D#Silver @195
+== D#Silver IF~InParty("D#Silver")~THEN @190 
+== D#Silver IF~InParty("D#Silver")~THEN @191
+== D#Silver IF~InParty("D#Silver")~THEN @192
+== D#Silver IF~InParty("D#Silver")~THEN @193
+== Maevar IF~InParty("D#Silver")~THEN @194
+== D#SilverIF~InParty("D#Silver")~THEN @195
 END
 
 I_C_T Maevar 3 silvermaevar
-== D#Silver @190 = @191 = @192 = @193
-== Maevar @194
-== D#Silver @195
+== D#Silver IF~InParty("D#Silver")~THEN @190 
+== D#Silver IF~InParty("D#Silver")~THEN @191
+== D#Silver IF~InParty("D#Silver")~THEN @192
+== D#Silver IF~InParty("D#Silver")~THEN @193
+== Maevar IF~InParty("D#Silver")~THEN @194
+== D#SilverIF~InParty("D#Silver")~THEN @195
 END
 
 I_C_T Maevar 5 silvermaevar
-== D#Silver @190 = @191 =  @192 = @193
-== Maevar @194
-== D#Silver @195
+== D#Silver IF~InParty("D#Silver")~THEN @190 
+== D#Silver IF~InParty("D#Silver")~THEN @191
+== D#Silver IF~InParty("D#Silver")~THEN @192
+== D#Silver IF~InParty("D#Silver")~THEN @193
+== Maevar IF~InParty("D#Silver")~THEN @194
+== D#SilverIF~InParty("D#Silver")~THEN @195
 END
 
 EXTEND_BOTTOM Maeguy01 4
@@ -858,7 +867,7 @@ EXIT
 
 ///////////////////////////////
 I_C_T Delcia 2 bitch
-== D#Silver @536
+== D#Silver IF~InParty("D#Silver")~THEN @536
 END
 
 ////////////////////////////////
