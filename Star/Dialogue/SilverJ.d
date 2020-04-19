@@ -624,7 +624,7 @@ I_C_T Maevar 2 silvermaevar
 == D#Silver IF~InParty("D#Silver")~THEN @192
 == D#Silver IF~InParty("D#Silver")~THEN @193
 == Maevar IF~InParty("D#Silver")~THEN @194
-== D#SilverIF~InParty("D#Silver")~THEN @195
+== D#Silver IF~InParty("D#Silver")~THEN @195
 END
 
 I_C_T Maevar 3 silvermaevar
@@ -633,7 +633,7 @@ I_C_T Maevar 3 silvermaevar
 == D#Silver IF~InParty("D#Silver")~THEN @192
 == D#Silver IF~InParty("D#Silver")~THEN @193
 == Maevar IF~InParty("D#Silver")~THEN @194
-== D#SilverIF~InParty("D#Silver")~THEN @195
+== D#Silver IF~InParty("D#Silver")~THEN @195
 END
 
 I_C_T Maevar 5 silvermaevar
@@ -642,7 +642,7 @@ I_C_T Maevar 5 silvermaevar
 == D#Silver IF~InParty("D#Silver")~THEN @192
 == D#Silver IF~InParty("D#Silver")~THEN @193
 == Maevar IF~InParty("D#Silver")~THEN @194
-== D#SilverIF~InParty("D#Silver")~THEN @195
+== D#Silver IF~InParty("D#Silver")~THEN @195
 END
 
 EXTEND_BOTTOM Maeguy01 4
