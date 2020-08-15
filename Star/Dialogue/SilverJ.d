@@ -618,7 +618,7 @@ END
 ////////////////////////////////////////////////////////////////////////////
 // Maevar Torture chambers
 
-I_C_T Maevar 2 silvermaevar
+I_C_T Maevar 2 silvermaevar1
 == D#Silver IF~InParty("D#Silver")~THEN @190 
 == D#Silver IF~InParty("D#Silver")~THEN @191
 == D#Silver IF~InParty("D#Silver")~THEN @192
@@ -627,7 +627,7 @@ I_C_T Maevar 2 silvermaevar
 == D#Silver IF~InParty("D#Silver")~THEN @195
 END
 
-I_C_T Maevar 3 silvermaevar
+I_C_T Maevar 3 silvermaevar2
 == D#Silver IF~InParty("D#Silver")~THEN @190 
 == D#Silver IF~InParty("D#Silver")~THEN @191
 == D#Silver IF~InParty("D#Silver")~THEN @192
@@ -636,7 +636,7 @@ I_C_T Maevar 3 silvermaevar
 == D#Silver IF~InParty("D#Silver")~THEN @195
 END
 
-I_C_T Maevar 5 silvermaevar
+I_C_T Maevar 5 silvermaevar3
 == D#Silver IF~InParty("D#Silver")~THEN @190 
 == D#Silver IF~InParty("D#Silver")~THEN @191
 == D#Silver IF~InParty("D#Silver")~THEN @192
