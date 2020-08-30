@@ -1,7 +1,7 @@
 BACKUP ~Star\backup~
 //AUTHOR ~Olryx2@Yahoo.co.uk~
 SUPPORT ~PaulaMigrate@mail.com~
-VERSION ~v2.0~
+VERSION ~v2.1~
 
 AUTO_TRA ~Star/%s~
 
