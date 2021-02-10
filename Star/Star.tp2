@@ -64,7 +64,7 @@ COPY ~Star\Creature\D#Silver.cre~ ~override\D#Silver.cre~
   SAY AREA_NIGHT ~~ [Innocr]
   SAY BATTLE_CRY1 ~~ [Female2a]
   SAY BATTLE_CRY2 ~~ [Innoc8]
-  SAY BORED ~Please, a little kill, even a little one! I'm bored.~ [Innocd]
+  SAY BORED @31
   SAY CRITICAL_HIT ~~ [Innocz]
   SAY CRITICAL_MISS ~~ [Innoc1]
   SAY DAMAGE ~~ [Female2l]
@@ -87,17 +87,17 @@ COPY ~Star\Creature\D#Silver.cre~ ~override\D#Silver.cre~
   SAY SELECT_RARE1 ~~ [Innocx]
   SAY SELECT_RARE2 ~~ [Innocy]
   SAY TARGET_IMMUNE ~~ [Innoc2]
-  SAY TIRED ~Mommy,I must sleep.~ [Innocc]
-  SAY UNHAPPY_ANNOYED ~Why will no one play with me?~
-  SAY UNHAPPY_BREAKING ~You are mean! You don't want me to play with my knife on other people!~
-  SAY UNHAPPY_SERIOUS ~How can I enjoy myself without a little killing? You said that you would play with me!~
+  SAY TIRED @32
+  SAY UNHAPPY_ANNOYED @33
+  SAY UNHAPPY_BREAKING @34
+  SAY UNHAPPY_SERIOUS @35
   SAY SPELL_DISRUPTED ~~ [Innoc6]
   SAY HIDDEN_IN_SHADOWS ~~ [Innoc5]
   SAY SET_A_TRAP ~~ [Innoc7]
   WRITE_SHORT   0x244 0
   WRITE_SHORT   0x246 0x4000 + ~%StarHL%~
-  SAY NAME1 ~Silver Star~
-  SAY NAME2 ~Silver Star~
+  SAY NAME1 @36
+  SAY NAME2 @36
   SAY BIO @6
 
 COMPILE ~Star\Scripts\D#Silver.baf~
