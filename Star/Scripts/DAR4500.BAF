@@ -14,8 +14,8 @@ THEN
 RESPONSE #100
 CreateVisualEffect("SPPORTAL",[1999.1218])
 Wait(2)
-CreateCreatureEffect("D#Silver","",[1999.1218],0)
-AddXPObject("D#Silver",2250000)
+MoveGlobal("AR4500","D#Silver",[1999.1218])
+ActionOverride("D#Silver",SetDialog("D#Silve1"))
 SetGlobal("D#SilverSpawnPlane","GLOBAL",1)
 END
 
